@@ -7,13 +7,7 @@ import (
 
 func main() {
 
-	myObjs := lunchmodel.MyTypes{
-		{
-			MyProp: "some intialized value 1",
-		}, {
-			MyProp: "some intialized value 2",
-		},
-	}
+	myObjs := lunchmodel.GetMyTypes()
 
 	for _, myObj := range myObjs {
 		fmt.Println(myObj.MyProp)
