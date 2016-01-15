@@ -3,16 +3,16 @@ package lunchmodel
 import "testing"
 
 func TestSideEffect(t *testing.T) {
-	myObj := MyType{}
+	myCar := Car{}
 
 	//	getText = mockGetText
 
-	myObj.MyFunc()
+	myCar.MyFunc()
 
 	//	if myObj.myOtherProp != "mock call" {
 
-	if myObj.myOtherProp != "who doesn't love side effects?!?!" {
-		t.Errorf("myOtherProp should be set", myObj)
+	if myCar.myOtherProp != "who doesn't love side effects?!?!" {
+		t.Errorf("myOtherProp should be set", myCar)
 	}
 }
 

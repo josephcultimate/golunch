@@ -5,29 +5,34 @@ import (
 	"strings"
 )
 
-type MyType struct {
+type Car struct {
+	Auto
 	MyProp      string
 	myOtherProp string
 }
 
 // Be Explicit!!!!
-type MyTypes []MyType
+type Cars []Car
 
-func (myType *MyType) MyFunc() {
+func (myCar *Car) MyFunc() {
 
-	myType.myOtherProp = getText()
+	myCar.myOtherProp = getText()
 
-	myType.MyProp = "Anyone can get to me"
+	myCar.MyProp = "Anyone can get to me"
 }
 
-func (myType *MyType) GetOther() (val string) {
+func (myCar *Car) GetOther() (val string) {
 
-	return myType.myOtherProp
+	return myCar.myOtherProp
 }
 
-func GetMyTypes() (myTypes MyTypes) {
+func (t Car) Honk() (s string) {
+	return "I am a car please move"
+}
 
-	return MyTypes{
+func GetMyCars() (myCars Cars) {
+
+	return Cars{
 		{
 			MyProp: "some intialized value 1",
 		}, {
