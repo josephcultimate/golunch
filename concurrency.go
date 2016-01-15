@@ -15,7 +15,7 @@ func worker(id int, jobs <-chan int, results chan<- string) {
 		results <- fmt.Sprintf("worker %v processing job %v slept for %v", id, j, sleep)
 	}
 }
-func main() {
+func main_concurrent() {
 
 	jobs := make(chan int, 100)
 	results := make(chan string, 100)
