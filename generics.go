@@ -5,7 +5,7 @@ import (
 	"lunchmodel"
 )
 
-func main() {
+func main_generic() {
 
 	myObjs := lunchmodel.GetMyTypes()
 
